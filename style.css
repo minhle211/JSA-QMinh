@@ -1,122 +1,138 @@
-ul {
-    list-style-type: none;
-    margin: 0;
+/* ....SETUP..... */
+* {
     padding: 0;
-  }
-
-  li {
-    display: inline-block;
-    text-align: center;
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-
-  body, html {
-    background-color: #F6F4EF;
-    height: 100%;
     margin: 0;
-    width: 100%;
-    overflow-x: hidden;
-  } 
-
-
-  .nav_bar {
-    width: 100%;
+    box-sizing: border-box;
+  }
+  /* ......................... */
+  /*....REUSABLE COMPONENT.... */
+  /* ......................... */
+  nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .button {
+    padding: 10px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+  }
+  .title {
+    font-size: 27px;
     text-align: center;
-    background-color: floralwhite;
-    padding-bottom: 3%;
+    text-transform: uppercase;
   }
-
-  .main_header {
-    text-align: center;
-    background-color: floralwhite;
-    padding: 2%;
-    font-family: 'Old Standard TT', serif;
-    color: #51442A;
-    width: 100%;
+  .title::after {
+    content: " ";
+    display: block;
+    background: orange;
+    width: 100px;
+    height: 2px;
+    margin: 20px auto;
   }
-
-  a:link {
-    color: #F1DFBD;
-    text-decoration: none;
+  i{
+      color: orange;
   }
-  a:visited {
-    color: #F1DFBD;
-    text-decoration: none;
-  }
-
-  a:hover {
-    color: #614715;
-    text-decoration: overline;
-  }
-  a:active {
-    color: #614715;
-    text-decoration: none;
-  }
-
-  .section_1 {
-    background-color: floralwhite;
-    width: 45%;
-    float: left;
-    text-align: left;
-    margin: 1%;
-    border-style: solid;
-    border-width: 2px;
-    border-color: #51442A;
-    padding: 1%;
-  }
-
-  .second_header {
-    text-align: center;
-    font-family: 'Old Standard TT', serif;
-    color: #51442A;
-  }
-
-  .section_2 {
-    background-color: floralwhite;
-    width: 45%;
-    float: right;
-    text-align: left;
-    margin: 1%;
-    border-style: solid;
-    border-width: 2px;
-    border-color: #51442A;
-    padding: 1%;
-  }
-
-  .third_header {
-    text-align: center;
-    font-family: 'Old Standard TT', serif;
-    color: #51442A;
-  }
-
-  .section_3 {
-    text-align: center;
-    padding: 2%;
-    font-family: 'Old Standard TT', serif;
-    color: #51442A;
-    width: 100%;
-    text-decoration: underline;
-  }
-
-  .small {
-    text-align: center;
-    margin: 3%;
-    font-size: 24px;
-    color: #51442A;
-  }
-
-  .footer {
+  
+  /* ......................... */
+  /* .......HOME MENU........ */
+  /* ......................... */
+  .home-menu {
+    background: url("./Image//hero.jpg");
+    background-size: cover;
+    background-position: center;
+    /* background-attachment: fixed; */
     position: relative;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    padding: 1rem;
-    background-color: floralwhite;
-    text-align: center;
-    clear: both;
+    z-index: 1;
+    padding-top: 20px;
+    padding-bottom: 50px;
   }
+  .black-opacity {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  .logo {
+    width: 100px;
+  }
+  .home-nav-option {
+    text-decoration: none;
+    color: white;
+    margin: 0 20px;
+  }
+  .menu-content {
+    margin: 150px;
+  }
+  .menu-content p {
+    color: white;
+    font-size: 27px;
+  }
+  .menu-button-1 {
+    background: orange;
+    color: white;
+    margin-right: 10px;
+  }
+  .menu-button-2 {
+    background: transparent;
+    border: 1px solid orange;
+    color: orange;
+  }
+  
+  /* ......................... */
+  /* .......HOME CONTENT........ */
+  /* ......................... */
+  .home-content {
+    padding: 50px 0;
+  }
+  .home-content-text{
+    display:flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px 300px;
+    width:630px;
+  }
+  .home-content-items{
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    padding: 0 100px 0 100px;
+  }
+  .items{
+    width:230px;
+    margin: 0 10px;
 
-  img {
-    vertical-align: middle;
+  }
+  .items-title{
+    font-size: 20px;
+    margin:10px 0 10px 0;
+  }
+  /* ......................... */
+  /* .......HOME BANNER........ */
+  /* ......................... */
+  .home-banner{
+    display:flex;
+    flex-wrap:wrap;
+    position: relative;
+    z-index: 1;
+  }
+  .black-opacity-2{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.25);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  .home-banner-content{
+    width:25%;    
+    position: relative;
+    z-index: -1;
+    top:0;
+    left:0;
   }
